@@ -26,7 +26,26 @@
 
 
 		<script>
-			// Code goes here...
+            // detect when the button is clicked
+            // render message into #fortune element
+
+            // find button on DOM
+            const fortuneButton = document.querySelector('button')
+            // console.log(fortuneButton)
+
+            // find fortune element on DOM
+            const fortuneElement = document.querySelector('#fortune')
+            // console.log(fortuneElement)
+
+            // write callback function before invoking it
+            const getFortune = _ => {
+                console.log('The button has been clicked!')
+                fortuneElement.textContent = 'You\'re going to have a wonderful day!'
+            }
+
+            // look for click event on button
+            // run callback func to render message
+            fortuneButton.addEventListener('click', getFortune)
 		</script>
 	</body>
 </html>
